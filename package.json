@@ -1,0 +1,27 @@
+{
+  "name": "jamming",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Social listening and private music rooms application",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "server"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@jamming/web",
+    "dev:server": "npm run dev --workspace=@jamming/server",
+    "build:web": "npm run build --workspace=@jamming/web",
+    "build:server": "npm run build --workspace=@jamming/server",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

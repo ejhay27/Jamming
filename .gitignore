@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Electron
+apps/windows/dist/
+apps/windows/out/
+
+# Android
+apps/android/.gradle/
+apps/android/app/build/
+apps/android/local.properties
+
+# Capacitor
+apps/android/capacitor.settings.gradle
+
+# Temporary
+.tmp/
+.cache/
+*.tgz
+
+# Secrets
+*.pem
+*.key
+secrets/

@@ -1,0 +1,99 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-overlay-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: var(--space-4);
+  animation: fadeIn var(--duration-fast) var(--easing-default);
+}
+
+.dialog {
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-height: calc(100vh - 2rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp var(--duration-normal) var(--easing-default);
+}
+
+.dialog-sm {
+  width: 100%;
+  max-width: 400px;
+}
+
+.dialog-md {
+  width: 100%;
+  max-width: 500px;
+}
+
+.dialog-lg {
+  width: 100%;
+  max-width: 700px;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.dialog-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.dialog-content {
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+.confirm-message {
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0 0 var(--space-6) 0;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .dialog {
+    max-width: 100%;
+  }
+  
+  .dialog-content {
+    padding: var(--space-4);
+  }
+}
